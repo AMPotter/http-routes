@@ -3,7 +3,7 @@
 const client = require('../lib/db-client');
 
 client.query(`
-    DROP TABLE pets;
+    DROP TABLE cupcakes;
     DROP TABLE categories;
 `)
     .then(
