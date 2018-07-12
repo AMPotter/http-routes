@@ -1,0 +1,40 @@
+{
+  "name": "http-routes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "mocha": "mocha",
+    "test": "npm run mocha",
+    "test:watch": "nodemon --exec 'npm run mocha -s'",
+    "start": "node server.js",
+    "start:watch": "nodemon server.js",
+    "db:create": "node db/create-db.js",
+    "db:load": "node db/load-db.js",
+    "db:drop": "node db/drop-tables",
+    "db:all": "npm run db:drop && npm run db:create && npm run db:load"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AMPotter/http-routes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AMPotter/http-routes/issues"
+  },
+  "homepage": "https://github.com/AMPotter/http-routes#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "eslint": "^5.1.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.1"
+  },
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "pg": "^7.4.3"
+  }
+}
